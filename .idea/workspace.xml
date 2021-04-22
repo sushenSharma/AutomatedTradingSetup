@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6bdc281d-36e3-4f33-9428-06a9b0b11dfd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pxdR9MDl2vlK8i8hbDQYN01H39" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Cash_data_processed_output" />
+      <recent name="$PROJECT_DIR$/PromoterSetupDataFiles" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/SecretSwingTrading" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.GUI_Main">
+    <configuration name="Experiment_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedTradingSetup" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Experiment_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Experiment_junkyard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedTradingSetup" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Experiment_junkyard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GUI_Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedTradingSetup" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI_Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PromoterSetup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedTradingSetup" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PromoterSetup.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="AutomatedTradingSetup" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/personalProject/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="swingtrading" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedTradingSetup" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SecretSwingTrading/Secret Swing Trading Strategy/Packages" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SecretSwingTrading/Secret Swing Trading Strategy/Packages/swingtrading.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Unnamed" />
+      <item itemvalue="Python.Experiment_2" />
+      <item itemvalue="Python.Experiment_junkyard" />
+      <item itemvalue="Python.GUI_Main" />
+      <item itemvalue="Python.PromoterSetup" />
+      <item itemvalue="Python.swingtrading" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.GUI_Main" />
+        <item itemvalue="Python.Experiment_junkyard" />
+        <item itemvalue="Python.Experiment_2" />
+        <item itemvalue="Python.PromoterSetup" />
+        <item itemvalue="Python.swingtrading" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6bdc281d-36e3-4f33-9428-06a9b0b11dfd" name="Default Changelist" comment="" />
+      <created>1616128664855</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616128664855</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2216" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616442954212">
+      <screen x="1792" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2216" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog/1792.23.1920.1057/75.23.1717.1097@1792.23.1920.1057" timestamp="1616407098130" />
+    <state x="2216" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog/1792.23.1920.1057/77.23.1715.1097@1792.23.1920.1057" timestamp="1616442954212" />
+    <state x="2462" y="361" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618691769448">
+      <screen x="1792" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2462" y="361" key="#com.intellij.fileTypes.FileTypeChooser/1792.23.1920.1057/77.23.1715.1097@1792.23.1920.1057" timestamp="1618691769448" />
+    <state width="1694" height="282" key="GridCell.Tab.0.bottom" timestamp="1619113816840">
+      <screen x="77" y="23" width="1715" height="1097" />
+    </state>
+    <state width="1899" height="559" key="GridCell.Tab.0.bottom/1792.23.1920.1057/71.23.1721.1097@1792.23.1920.1057" timestamp="1618897648729" />
+    <state width="1700" height="619" key="GridCell.Tab.0.bottom/1792.23.1920.1057/71.23.1721.1097@71.23.1721.1097" timestamp="1618823001037" />
+    <state width="1899" height="587" key="GridCell.Tab.0.bottom/1792.23.1920.1057/75.23.1717.1097@1792.23.1920.1057" timestamp="1619035178504" />
+    <state width="1899" height="221" key="GridCell.Tab.0.bottom/1792.23.1920.1057/77.23.1715.1097@1792.23.1920.1057" timestamp="1619031537733" />
+    <state width="1694" height="196" key="GridCell.Tab.0.bottom/71.23.1721.1097@71.23.1721.1097" timestamp="1617365377503" />
+    <state width="1899" height="366" key="GridCell.Tab.0.bottom/72.23.1848.1057@72.23.1848.1057" timestamp="1616410652347" />
+    <state width="1694" height="196" key="GridCell.Tab.0.bottom/75.23.1717.1097@75.23.1717.1097" timestamp="1617365965292" />
+    <state width="1694" height="282" key="GridCell.Tab.0.bottom/77.23.1715.1097@77.23.1715.1097" timestamp="1619113816840" />
+    <state width="1694" height="282" key="GridCell.Tab.0.center" timestamp="1619113816839">
+      <screen x="77" y="23" width="1715" height="1097" />
+    </state>
+    <state width="1899" height="559" key="GridCell.Tab.0.center/1792.23.1920.1057/71.23.1721.1097@1792.23.1920.1057" timestamp="1618897648729" />
+    <state width="1700" height="619" key="GridCell.Tab.0.center/1792.23.1920.1057/71.23.1721.1097@71.23.1721.1097" timestamp="1618823001036" />
+    <state width="1899" height="587" key="GridCell.Tab.0.center/1792.23.1920.1057/75.23.1717.1097@1792.23.1920.1057" timestamp="1619035178503" />
+    <state width="1899" height="221" key="GridCell.Tab.0.center/1792.23.1920.1057/77.23.1715.1097@1792.23.1920.1057" timestamp="1619031537733" />
+    <state width="1694" height="196" key="GridCell.Tab.0.center/71.23.1721.1097@71.23.1721.1097" timestamp="1617365377502" />
+    <state width="1899" height="366" key="GridCell.Tab.0.center/72.23.1848.1057@72.23.1848.1057" timestamp="1616410652346" />
+    <state width="1694" height="196" key="GridCell.Tab.0.center/75.23.1717.1097@75.23.1717.1097" timestamp="1617365965291" />
+    <state width="1694" height="282" key="GridCell.Tab.0.center/77.23.1715.1097@77.23.1715.1097" timestamp="1619113816839" />
+    <state width="1694" height="282" key="GridCell.Tab.0.left" timestamp="1619113816839">
+      <screen x="77" y="23" width="1715" height="1097" />
+    </state>
+    <state width="1899" height="559" key="GridCell.Tab.0.left/1792.23.1920.1057/71.23.1721.1097@1792.23.1920.1057" timestamp="1618897648729" />
+    <state width="1700" height="619" key="GridCell.Tab.0.left/1792.23.1920.1057/71.23.1721.1097@71.23.1721.1097" timestamp="1618823001036" />
+    <state width="1899" height="587" key="GridCell.Tab.0.left/1792.23.1920.1057/75.23.1717.1097@1792.23.1920.1057" timestamp="1619035178503" />
+    <state width="1899" height="221" key="GridCell.Tab.0.left/1792.23.1920.1057/77.23.1715.1097@1792.23.1920.1057" timestamp="1619031537732" />
+    <state width="1694" height="196" key="GridCell.Tab.0.left/71.23.1721.1097@71.23.1721.1097" timestamp="1617365377502" />
+    <state width="1899" height="366" key="GridCell.Tab.0.left/72.23.1848.1057@72.23.1848.1057" timestamp="1616410652346" />
+    <state width="1694" height="196" key="GridCell.Tab.0.left/75.23.1717.1097@75.23.1717.1097" timestamp="1617365965291" />
+    <state width="1694" height="282" key="GridCell.Tab.0.left/77.23.1715.1097@77.23.1715.1097" timestamp="1619113816839" />
+    <state width="1694" height="282" key="GridCell.Tab.0.right" timestamp="1619113816840">
+      <screen x="77" y="23" width="1715" height="1097" />
+    </state>
+    <state width="1899" height="559" key="GridCell.Tab.0.right/1792.23.1920.1057/71.23.1721.1097@1792.23.1920.1057" timestamp="1618897648729" />
+    <state width="1700" height="619" key="GridCell.Tab.0.right/1792.23.1920.1057/71.23.1721.1097@71.23.1721.1097" timestamp="1618823001037" />
+    <state width="1899" height="587" key="GridCell.Tab.0.right/1792.23.1920.1057/75.23.1717.1097@1792.23.1920.1057" timestamp="1619035178504" />
+    <state width="1899" height="221" key="GridCell.Tab.0.right/1792.23.1920.1057/77.23.1715.1097@1792.23.1920.1057" timestamp="1619031537733" />
+    <state width="1694" height="196" key="GridCell.Tab.0.right/71.23.1721.1097@71.23.1721.1097" timestamp="1617365377502" />
+    <state width="1899" height="366" key="GridCell.Tab.0.right/72.23.1848.1057@72.23.1848.1057" timestamp="1616410652347" />
+    <state width="1694" height="196" key="GridCell.Tab.0.right/75.23.1717.1097@75.23.1717.1097" timestamp="1617365965292" />
+    <state width="1694" height="282" key="GridCell.Tab.0.right/77.23.1715.1097@77.23.1715.1097" timestamp="1619113816840" />
+    <state width="1899" height="67" key="GridCell.Tab.1.bottom" timestamp="1619031537728">
+      <screen x="1792" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1899" height="251" key="GridCell.Tab.1.bottom/1792.23.1920.1057/68.23.1724.1097@1792.23.1920.1057" timestamp="1617048009338" />
+    <state width="1899" height="267" key="GridCell.Tab.1.bottom/1792.23.1920.1057/71.23.1721.1097@1792.23.1920.1057" timestamp="1618262677394" />
+    <state width="1899" height="559" key="GridCell.Tab.1.bottom/1792.23.1920.1057/75.23.1717.1097@1792.23.1920.1057" timestamp="1619030991667" />
+    <state width="1899" height="67" key="GridCell.Tab.1.bottom/1792.23.1920.1057/77.23.1715.1097@1792.23.1920.1057" timestamp="1619031537728" />
+    <state width="1899" height="67" key="GridCell.Tab.1.center" timestamp="1619031537727">
+      <screen x="1792" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1899" height="251" key="GridCell.Tab.1.center/1792.23.1920.1057/68.23.1724.1097@1792.23.1920.1057" timestamp="1617048009338" />
+    <state width="1899" height="267" key="GridCell.Tab.1.center/1792.23.1920.1057/71.23.1721.1097@1792.23.1920.1057" timestamp="1618262677393" />
+    <state width="1899" height="559" key="GridCell.Tab.1.center/1792.23.1920.1057/75.23.1717.1097@1792.23.1920.1057" timestamp="1619030991667" />
+    <state width="1899" height="67" key="GridCell.Tab.1.center/1792.23.1920.1057/77.23.1715.1097@1792.23.1920.1057" timestamp="1619031537727" />
+    <state width="1899" height="67" key="GridCell.Tab.1.left" timestamp="1619031537727">
+      <screen x="1792" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1899" height="251" key="GridCell.Tab.1.left/1792.23.1920.1057/68.23.1724.1097@1792.23.1920.1057" timestamp="1617048009337" />
+    <state width="1899" height="267" key="GridCell.Tab.1.left/1792.23.1920.1057/71.23.1721.1097@1792.23.1920.1057" timestamp="1618262677393" />
+    <state width="1899" height="559" key="GridCell.Tab.1.left/1792.23.1920.1057/75.23.1717.1097@1792.23.1920.1057" timestamp="1619030991666" />
+    <state width="1899" height="67" key="GridCell.Tab.1.left/1792.23.1920.1057/77.23.1715.1097@1792.23.1920.1057" timestamp="1619031537727" />
+    <state width="1899" height="67" key="GridCell.Tab.1.right" timestamp="1619031537727">
+      <screen x="1792" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1899" height="251" key="GridCell.Tab.1.right/1792.23.1920.1057/68.23.1724.1097@1792.23.1920.1057" timestamp="1617048009338" />
+    <state width="1899" height="267" key="GridCell.Tab.1.right/1792.23.1920.1057/71.23.1721.1097@1792.23.1920.1057" timestamp="1618262677393" />
+    <state width="1899" height="559" key="GridCell.Tab.1.right/1792.23.1920.1057/75.23.1717.1097@1792.23.1920.1057" timestamp="1619030991667" />
+    <state width="1899" height="67" key="GridCell.Tab.1.right/1792.23.1920.1057/77.23.1715.1097@1792.23.1920.1057" timestamp="1619031537727" />
+    <state x="2261" y="190" key="SettingsEditor" timestamp="1618080746656">
+      <screen x="1792" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2261" y="190" key="SettingsEditor/1792.23.1920.1057/77.23.1715.1097@1792.23.1920.1057" timestamp="1618080746656" />
+    <state width="960" height="528" key="XDebugger.FullValuePopup" timestamp="1618082254022">
+      <screen x="1792" y="23" width="1920" height="1057" />
+    </state>
+    <state width="960" height="528" key="XDebugger.FullValuePopup/1792.23.1920.1057/75.23.1717.1097@1792.23.1920.1057" timestamp="1618082254022" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Trading_Journal_Module.py</url>
+          <line>190</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,60 @@
+22-03-2021 00:20:42 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+22-03-2021 00:20:42 DEBUG    "GET /content/historical/DERIVATIVES/2021/MAR/fo22MAR2021bhav.csv.zip HTTP/1.1" 302 0
+22-03-2021 00:20:42 WARNING  File Not Downloadable,because It Doesn't Exist
+22-03-2021 00:20:42 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+22-03-2021 00:20:43 DEBUG    "GET /products/content/sec_bhavdata_full_22032021.csv HTTP/1.1" 302 None
+22-03-2021 00:20:43 WARNING  File Not Downloadable,because It Doesn't Exist
+19-03-2021 00:22:38 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+19-03-2021 00:22:39 DEBUG    "GET /content/historical/DERIVATIVES/2021/MAR/fo19MAR2021bhav.csv.zip HTTP/1.1" 200 630507
+19-03-2021 00:22:39 INFO     File Exists and it is downloadable
+19-03-2021 00:22:39 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+19-03-2021 00:22:39 DEBUG    "GET /products/content/sec_bhavdata_full_19032021.csv HTTP/1.1" 200 None
+19-03-2021 00:22:39 INFO     File Exists and it is downloadable
+22-03-2021 01:02:54 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+22-03-2021 01:02:55 DEBUG    "GET /content/historical/DERIVATIVES/2021/MAR/fo22MAR2021bhav.csv.zip HTTP/1.1" 302 0
+22-03-2021 01:02:55 WARNING  File Not Downloadable,because It Doesn't Exist
+22-03-2021 01:02:55 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+22-03-2021 01:02:55 DEBUG    "GET /products/content/sec_bhavdata_full_22032021.csv HTTP/1.1" 302 0
+22-03-2021 01:02:55 WARNING  File Not Downloadable,because It Doesn't Exist
+22-03-2021 01:03:15 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+22-03-2021 01:03:15 DEBUG    "GET /content/historical/DERIVATIVES/2021/MAR/fo22MAR2021bhav.csv.zip HTTP/1.1" 302 0
+22-03-2021 01:03:15 WARNING  File Not Downloadable,because It Doesn't Exist
+22-03-2021 01:03:15 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+22-03-2021 01:03:15 DEBUG    "GET /products/content/sec_bhavdata_full_22032021.csv HTTP/1.1" 302 0
+22-03-2021 01:03:15 WARNING  File Not Downloadable,because It Doesn't Exist
+19-03-2021 01:04:19 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+19-03-2021 01:04:19 DEBUG    "GET /content/historical/DERIVATIVES/2021/MAR/fo19MAR2021bhav.csv.zip HTTP/1.1" 200 630507
+19-03-2021 01:04:20 INFO     File Exists and it is downloadable
+19-03-2021 01:04:29 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+19-03-2021 01:04:30 DEBUG    "GET /products/content/sec_bhavdata_full_19032021.csv HTTP/1.1" 200 None
+19-03-2021 01:04:30 INFO     File Exists and it is downloadable
+19-03-2021 01:04:43 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+19-03-2021 01:04:44 DEBUG    "GET /content/historical/DERIVATIVES/2021/MAR/fo19MAR2021bhav.csv.zip HTTP/1.1" 200 630507
+19-03-2021 01:04:44 INFO     File Exists and it is downloadable
+19-03-2021 01:04:44 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+19-03-2021 01:04:44 DEBUG    "GET /products/content/sec_bhavdata_full_19032021.csv HTTP/1.1" 200 None
+19-03-2021 01:04:44 INFO     File Exists and it is downloadable
+02-04-2021 17:43:46 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+02-04-2021 17:43:47 DEBUG    "GET /content/historical/DERIVATIVES/2021/MAR/fo02APR2021bhav.csv.zip HTTP/1.1" 302 0
+02-04-2021 17:43:47 WARNING  File Not Downloadable,because It Doesn't Exist
+02-04-2021 17:43:47 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+02-04-2021 17:43:47 DEBUG    "GET /products/content/sec_bhavdata_full_02042021.csv HTTP/1.1" 200 None
+02-04-2021 17:43:47 INFO     File Exists and it is downloadable
+19-04-2021 23:49:24 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+19-04-2021 23:49:24 DEBUG    "GET /content/historical/DERIVATIVES/2021/MAR/fo19APR2021bhav.csv.zip HTTP/1.1" 302 0
+19-04-2021 23:49:24 WARNING  File Not Downloadable,because It Doesn't Exist
+19-04-2021 23:49:24 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+19-04-2021 23:49:24 DEBUG    "GET /products/content/sec_bhavdata_full_19042021.csv HTTP/1.1" 200 None
+19-04-2021 23:49:25 INFO     File Exists and it is downloadable
+20-04-2021 22:11:47 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+20-04-2021 22:11:48 DEBUG    "GET /content/historical/DERIVATIVES/2021/MAR/fo20APR2021bhav.csv.zip HTTP/1.1" 302 0
+20-04-2021 22:11:48 WARNING  File Not Downloadable,because It Doesn't Exist
+20-04-2021 22:11:48 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+20-04-2021 22:11:49 DEBUG    "GET /products/content/sec_bhavdata_full_20042021.csv HTTP/1.1" 200 None
+20-04-2021 22:11:49 INFO     File Exists and it is downloadable
+22-04-2021 22:13:07 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+22-04-2021 22:13:07 DEBUG    "GET /content/historical/DERIVATIVES/2021/MAR/fo22APR2021bhav.csv.zip HTTP/1.1" 302 0
+22-04-2021 22:13:07 WARNING  File Not Downloadable,because It Doesn't Exist
+22-04-2021 22:13:07 INFO     Starting new HTTPS connection (1): archives.nseindia.com
+22-04-2021 22:13:07 DEBUG    "GET /products/content/sec_bhavdata_full_22042021.csv HTTP/1.1" 200 None
+22-04-2021 22:13:08 INFO     File Exists and it is downloadable
