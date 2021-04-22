@@ -153,7 +153,7 @@ class class_Next_Day_watchlist_summary:
                             Repeat_days = Repeat_days + 1
                         else:
                             break
-                # row ={'StockName':Name_of_stock[0],'Sector':Sector_of_stock[0],'Mean_value_hilo':Mean_Value_of_Hilow,'Compression Number':narrowRange_days,'RepeatDays':Repeat_days}
+
                 row = {'StockName': Name_of_stock[0], 'Sector': Sector_of_stock[0],'Mean_value_hilo': Mean_Value_of_Hilow, 'Compression Number': narrowRange_days,'Return_Today': ((str)((nse.get_quote(Name_of_stock[0]))["pChange"])),'Nifty_return': NiftyChange_Percentage, 'RepeatDays': Repeat_days}
                 FinalDataFrame = FinalDataFrame.append(row, ignore_index=True)
 
