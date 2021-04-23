@@ -138,14 +138,14 @@ class TradingJournal:
                        display_row_numbers=True,
                        auto_size_columns=False,
                        key='-INTRADAY_LEDGER_TABLE-',
-                       num_rows=min(25, len(data))),
+                       num_rows=max(55, len(data))),
 
              gui.Table(values=data,
                        headings=header_list,
                        display_row_numbers=True,
                        auto_size_columns=False,
                        key='-SWINGTRADE_LEDGER_TABLE-',
-                       num_rows=min(25, len(data)))
+                       num_rows=max(55, len(data)))
 
              ]
         ]
@@ -174,6 +174,7 @@ class TradingJournal:
                 R_Multiple = float("{:.2f}".format(Reward / Risk))
                 R_Multiple = str(R_Multiple) + "R"
 
+
                 list_of_values.append(Intraday_Stock_symbol)
                 list_of_values.append(Type_of_Trade)
                 list_of_values.append(Amount)
@@ -185,10 +186,12 @@ class TradingJournal:
 
                 self.Insert_Data_In_Table(connection_string, connection_string, "Intraday_Ledger", list_of_values)
                 result_values = self.Show_Data_from_table(connection_string, connection_cursor, "Intraday_Ledger")
-                print(result_values)
-                a = [['Drreddy', 'Intrady', 'Intrady', 'Intrady', 'v', 'Intrady', 'Intrady', 'profit']]
 
-                window('-INTRADAY_LEDGER_TABLE-').update(values=a)
+                Intermediate_Process_result_values = list(map(lambda x: [x], result_values))
+                Final_Processed_Result_Values = list(map(lambda x: list(x[0]),  Intermediate_Process_result_values))
+
+
+                window.Element('-INTRADAY_LEDGER_TABLE-').update(values= Final_Processed_Result_Values)
 
                 pass
             elif (event == "Clear Record"):  # Intraday Clear Record
