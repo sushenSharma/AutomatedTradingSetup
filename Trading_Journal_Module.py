@@ -161,37 +161,44 @@ class TradingJournal:
             if (event == gui.WIN_CLOSED) or (event == "Exit"):
                 break
             elif (event == "Add Record"):  # Intraday Add Record
-                list_of_values = []
-                Intraday_Stock_symbol = values[0]
-                Type_of_Trade = "Intrady"
-                Amount = values[1]
-                Buy_price = (int)(values[2])
-                Stop_loss = int(values[3])
-                Target = int(values[4])
-                Risk = Buy_price - Stop_loss
-                Reward = Target - Buy_price
-                Status = values[5]
-                R_Multiple = float("{:.2f}".format(Reward / Risk))
-                R_Multiple = str(R_Multiple) + "R"
+                if (str(values[0]) == "") or (str(values[1]) == "") or (str(values[2]) == "") or (str(values[3]) == "") or (str(values[4]) == "") or (str(values[5]) == ""):
+                    gui.popup_ok("Please Fill All the Values", background_color="black",text_color="yellow")
+
+                else:
+                    list_of_values = []
+                    Intraday_Stock_symbol = values[0]
+                    Type_of_Trade = "Intrady"
+                    Amount = values[1]
+                    Buy_price = (int)(values[2])
+                    Stop_loss = int(values[3])
+                    Target = int(values[4])
+                    Risk = Buy_price - Stop_loss
+                    Reward = Target - Buy_price
+                    Status = values[5]
+                    R_Multiple = float("{:.2f}".format(Reward / Risk))
+                    R_Multiple = str(R_Multiple) + "R"
 
 
-                list_of_values.append(Intraday_Stock_symbol)
-                list_of_values.append(Type_of_Trade)
-                list_of_values.append(Amount)
-                list_of_values.append(str(Buy_price))
-                list_of_values.append(str(Stop_loss))
-                list_of_values.append(str(Target))
-                list_of_values.append(R_Multiple)
-                list_of_values.append(Status)
-
-                self.Insert_Data_In_Table(connection_string, connection_string, "Intraday_Ledger", list_of_values)
-                result_values = self.Show_Data_from_table(connection_string, connection_cursor, "Intraday_Ledger")
-
-                Intermediate_Process_result_values = list(map(lambda x: [x], result_values))
-                Final_Processed_Result_Values = list(map(lambda x: list(x[0]),  Intermediate_Process_result_values))
+                    list_of_values.append(Intraday_Stock_symbol)
+                    list_of_values.append(Type_of_Trade)
+                    list_of_values.append(Amount)
+                    list_of_values.append(str(Buy_price))
+                    list_of_values.append(str(Stop_loss))
+                    list_of_values.append(str(Target))
+                    list_of_values.append(R_Multiple)
+                    list_of_values.append(Status)
 
 
-                window.Element('-INTRADAY_LEDGER_TABLE-').update(values= Final_Processed_Result_Values)
+
+
+                    self.Insert_Data_In_Table(connection_string, connection_string, "Intraday_Ledger", list_of_values)
+                    result_values = self.Show_Data_from_table(connection_string, connection_cursor, "Intraday_Ledger")
+
+                    Intermediate_Process_result_values = list(map(lambda x: [x], result_values))
+                    Final_Processed_Result_Values = list(map(lambda x: list(x[0]),  Intermediate_Process_result_values))
+
+
+                    window.Element('-INTRADAY_LEDGER_TABLE-').update(values= Final_Processed_Result_Values)
 
                 pass
             elif (event == "Clear Record"):  # Intraday Clear Record
