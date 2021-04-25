@@ -32,7 +32,7 @@ class class_Download_raw_data_Operation():
         Derivative_Date_Format = x.strftime("%d%b%Y").upper()
         Cash_Date_Format = x.strftime("%d%m%Y").upper()
 
-        url_list  = ["https://archives.nseindia.com/content/historical/DERIVATIVES/2021/MAR/fo{0}bhav.csv.zip".replace("{0}",Derivative_Date_Format),"https://archives.nseindia.com/products/content/sec_bhavdata_full_{0}.csv".replace("{0}",Cash_Date_Format)]
+        url_list  = ["https://archives.nseindia.com/content/historical/DERIVATIVES/2021/APR/fo{0}bhav.csv.zip".replace("{0}",Derivative_Date_Format),"https://archives.nseindia.com/products/content/sec_bhavdata_full_{0}.csv".replace("{0}",Cash_Date_Format)]
         print(url_list)
         Parent_file_Path = class_Download_raw_data_Operation.object_folder_operation.Create_DownloadFolder_ifDoesnot_Exist()
         for url in url_list:

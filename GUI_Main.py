@@ -14,7 +14,7 @@ object_Promoter_Strategy_operation = Promoter_setup()
 object_Trading_journal = TradingJournal()
 
 
-gui.theme('tanblue')
+gui.theme('darkblue1')
 coordinates = pyautogui.size()
 width_of_screen = coordinates[0]
 height_of_screen = coordinates[1]

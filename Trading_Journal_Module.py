@@ -76,7 +76,7 @@ class TradingJournal:
         return result
 
     def Gui_Formation(self):
-
+        gui.theme('TealMono')
         connection_string = self.DatabaseConnection_String_Setup()
         connection_cursor = self.DatabaseConnection_cursor_Setup(connection_string)
 
@@ -92,23 +92,20 @@ class TradingJournal:
         data = [['0', '1', '2', '3', '4', '5', '6', '7']]
 
         # data = [self.Show_Data_from_table(connection_string,connection_cursor,"Intraday_Ledger")]
-        header_list = ["Stock_Symbol", "Type_of_Trade", "Amount", "Buy_Price", "Stop_Loss", "Target", "R_Multiple",
+        header_list = ["Stock_Symbol", "Type_of_Trade", "Amount", "Entry_Price", "Stop_Loss", "Exit_Price", "R_Multiple",
                        "Status"]
         layout = [
             [
                 gui.Frame(
                     layout=[
-                        [gui.Text('Stock Symbol', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN),
-                         gui.Input()],
+                        [gui.Text('Stock Symbol', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN),gui.Input(key='-INTRADAY_STOCK_SYMBOL-')],
                         [gui.Text('Type of Trade', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN),
                          gui.Text('Intraday', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN)],
-                        [gui.Text('Amount', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN), gui.Input()],
-                        [gui.Text('Buy Price', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN),
-                         gui.Input()],
-                        [gui.Text('Stop Loss', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN),
-                         gui.Input()],
-                        [gui.Text('Target', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN), gui.Input()],
-                        [gui.Text('Status', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN), gui.Input()],
+                        [gui.Text('Amount', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN), gui.Input(key='-INTRADAY_AMOUNT-')],
+                        [gui.Text('Entry Price', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN),gui.Input(key='-INTRADAY_BUY_PRICE-')],
+                        [gui.Text('Stop Loss', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN),gui.Input(key='-INTRADAY_STOP_LOSS-')],
+                        [gui.Text('Exit Price', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN), gui.Input(key='-INTRADAY_TARGET-')],
+                        [gui.Text('Status', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN), gui.Input(key='-INTRADAY_STATUS-')],
                         [gui.Button('Add Record', enable_events=True), gui.Button('Clear Record')]
 
                     ], title="INTRADAY LEDGER", title_color="Black", relief=gui.RELIEF_SOLID,
@@ -161,20 +158,20 @@ class TradingJournal:
             if (event == gui.WIN_CLOSED) or (event == "Exit"):
                 break
             elif (event == "Add Record"):  # Intraday Add Record
-                if (str(values[0]) == "") or (str(values[1]) == "") or (str(values[2]) == "") or (str(values[3]) == "") or (str(values[4]) == "") or (str(values[5]) == ""):
+                if (str(values['-INTRADAY_STOCK_SYMBOL-']) == "") or (str(values['-INTRADAY_AMOUNT-']) == "") or (str(values['-INTRADAY_BUY_PRICE-']) == "") or (str(values['-INTRADAY_STOP_LOSS-']) == "") or (str(values['-INTRADAY_TARGET-']) == "") or (str(values['-INTRADAY_STATUS-']) == ""):
                     gui.popup_ok("Please Fill All the Values", background_color="black",text_color="yellow")
 
                 else:
                     list_of_values = []
-                    Intraday_Stock_symbol = values[0]
+                    Intraday_Stock_symbol = values['-INTRADAY_STOCK_SYMBOL-']
                     Type_of_Trade = "Intrady"
-                    Amount = values[1]
-                    Buy_price = (int)(values[2])
-                    Stop_loss = int(values[3])
-                    Target = int(values[4])
+                    Amount = values['-INTRADAY_AMOUNT-']
+                    Buy_price = (int)(values['-INTRADAY_BUY_PRICE-'])
+                    Stop_loss = int(values['-INTRADAY_STOP_LOSS-'])
+                    Target = int(values['-INTRADAY_TARGET-'])
                     Risk = Buy_price - Stop_loss
                     Reward = Target - Buy_price
-                    Status = values[5]
+                    Status = values['-INTRADAY_STATUS-']
                     R_Multiple = float("{:.2f}".format(Reward / Risk))
                     R_Multiple = str(R_Multiple) + "R"
 
@@ -199,10 +196,21 @@ class TradingJournal:
 
 
                     window.Element('-INTRADAY_LEDGER_TABLE-').update(values= Final_Processed_Result_Values)
+                    window['-INTRADAY_STOCK_SYMBOL-'].update('')
+                    window['-INTRADAY_AMOUNT-'].update('')
+                    window['-INTRADAY_BUY_PRICE-'].update('')
+                    window['-INTRADAY_STOP_LOSS-'].update('')
+                    window['-INTRADAY_TARGET-'].update('')
+                    window['-INTRADAY_STATUS-'].update('')
 
-                pass
             elif (event == "Clear Record"):  # Intraday Clear Record
-                pass
+                window['-INTRADAY_STOCK_SYMBOL-'].update('')
+                window['-INTRADAY_AMOUNT-'].update('')
+                window['-INTRADAY_BUY_PRICE-'].update('')
+                window['-INTRADAY_STOP_LOSS-'].update('')
+                window['-INTRADAY_TARGET-'].update('')
+                window['-INTRADAY_STATUS-'].update('')
+
             elif (event == "Add Record0"):  # Swing Trade Add Record
                 pass
             elif (event == "Clear Record1"):  # Swing Trade Clear Record

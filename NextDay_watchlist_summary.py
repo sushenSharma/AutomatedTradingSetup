@@ -52,7 +52,7 @@ class class_Next_Day_watchlist_summary:
             data.rename(columns={'SYMBOL': 'Date'}, inplace=True)
             data.rename(columns={' DATE1': 'Symbol'}, inplace=True)
             Shortlisted_DataFrame_With_Corresponding_Sectors = pd.merge(data, sector, on="Symbol")
-            temp_result = Shortlisted_DataFrame_With_Corresponding_Sectors[(Shortlisted_DataFrame_With_Corresponding_Sectors["Date"] == "2021-04-22") & (Shortlisted_DataFrame_With_Corresponding_Sectors["delivery_Factor"] > 100)]
+            temp_result = Shortlisted_DataFrame_With_Corresponding_Sectors[(Shortlisted_DataFrame_With_Corresponding_Sectors["Date"] == "2021-04-23") & (Shortlisted_DataFrame_With_Corresponding_Sectors["delivery_Factor"] > 100)]
             temp_result = temp_result[["Date", "Symbol", "delivery_Factor", "Industry"]]
             temp_resu = temp_result.groupby(['Industry', 'Symbol'])
 
