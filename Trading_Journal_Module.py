@@ -166,9 +166,9 @@ class TradingJournal:
                     Intraday_Stock_symbol = values['-INTRADAY_STOCK_SYMBOL-']
                     Type_of_Trade = "Intrady"
                     Amount = values['-INTRADAY_AMOUNT-']
-                    Buy_price = (int)(values['-INTRADAY_BUY_PRICE-'])
-                    Stop_loss = int(values['-INTRADAY_STOP_LOSS-'])
-                    Target = int(values['-INTRADAY_TARGET-'])
+                    Buy_price = (float)(values['-INTRADAY_BUY_PRICE-'])
+                    Stop_loss = (float)(values['-INTRADAY_STOP_LOSS-'])
+                    Target = float(values['-INTRADAY_TARGET-'])
                     Risk = Buy_price - Stop_loss
                     Reward = Target - Buy_price
                     Status = values['-INTRADAY_STATUS-']
