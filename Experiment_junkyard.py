@@ -1,11 +1,12 @@
-import glob
-from pprint import pprint
+from collections import Counter
 
-filelist = []
-for name in glob.glob('FObhavCopy_Data//[0-9][0-9]_sec_bhavdata_full_*.csv'):
-        filelist.append(name)
+import pandas as pd
+data = pd.read_csv("Actual_result_daily.csv")
 
-for name in glob.glob('FObhavCopy_Data//[0-9][0-9][0-9]_sec_bhavdata_full_*.csv'):
-        filelist.append(name)
+Sector_Series = data["Sector"].to_list()
+print(type(Sector_Series))
 
-pprint(filelist)
+
+
+j =  [[x,Sector_Series.count(x)] for x in set(Sector_Series)]
+print(j)

@@ -52,7 +52,7 @@ class class_Next_Day_watchlist_summary:
             data.rename(columns={'SYMBOL': 'Date'}, inplace=True)
             data.rename(columns={' DATE1': 'Symbol'}, inplace=True)
             Shortlisted_DataFrame_With_Corresponding_Sectors = pd.merge(data, sector, on="Symbol")
-            temp_result = Shortlisted_DataFrame_With_Corresponding_Sectors[(Shortlisted_DataFrame_With_Corresponding_Sectors["Date"] == "2021-04-26") & (Shortlisted_DataFrame_With_Corresponding_Sectors["delivery_Factor"] > 100)]
+            temp_result = Shortlisted_DataFrame_With_Corresponding_Sectors[(Shortlisted_DataFrame_With_Corresponding_Sectors["Date"] == "2021-04-27") & (Shortlisted_DataFrame_With_Corresponding_Sectors["delivery_Factor"] > 100)]
             temp_result = temp_result[["Date", "Symbol", "delivery_Factor", "Industry"]]
             temp_resu = temp_result.groupby(['Industry', 'Symbol'])
 
@@ -163,9 +163,9 @@ class class_Next_Day_watchlist_summary:
 
             print(fin_resu.first())
             fin_resu.first().to_csv("Actual_result_daily.csv")
-            print(FinalDataFrame["Sector"].value_counts())
-
-            return temp_resu
+            Sector_List = FinalDataFrame["Sector"].to_list()
+            Sector_List_with_Counter = [[x,Sector_List.count(x)] for x in set(Sector_List)]
+            return Sector_List_with_Counter
 
 
 
@@ -175,8 +175,14 @@ class class_Next_Day_watchlist_summary:
 
 
     def GUI_formation(self):
-        headings_Table = ['SECTOR_NAME', 'SYMBOL', 'DATE', 'DELIVERY_FACTOR']
-        raw_data = [[0, 0, 0, 0]]
+        gui.theme('TealMono')
+
+        headings_Table = [ 'DATE','SECTOR_NAME', 'SYMBOL', 'COMPRESSION NUMBER','REPEAT DAYS']
+        raw_data = [[0, 0, 0, 0,0]]
+
+        headings_Sector_counter_Table = ['SECTOR_NAME','Counter']
+        raw_data_Sector_counter = [[0, 0]]
+
         layout12 = [
             [gui.Text("StockName : ", font=('MS Sans Serif', 7, 'bold'), text_color='red', background_color='white'),
 
@@ -185,11 +191,23 @@ class class_Next_Day_watchlist_summary:
 
             [gui.Table(values=raw_data,
                        headings=headings_Table,
-                       auto_size_columns=True,
+                       auto_size_columns=False,
                        justification='right',
                        key='-TABLE_FO-',
-                       alternating_row_color='green',
-                       num_rows=min(len(raw_data), 20), vertical_scroll_only=False),
+                       num_rows=max(len(raw_data), 20)),
+
+             gui.Table(values=raw_data_Sector_counter,
+                        headings=headings_Sector_counter_Table,
+                        auto_size_columns=False,
+                        justification='right',
+                        key='-Sector_Counter-',
+                        alternating_row_color="brown",
+                        num_rows=max(len(raw_data),20)),
+
+
+
+
+
              ],
 
         ]
@@ -203,7 +221,9 @@ class class_Next_Day_watchlist_summary:
                 break
             elif event=="GetSheet":
 
-                stock_specific_values_OPTION = self.Summarize_Cash_data(cash_file_path)
-                window_great['-TABLE_FO-'].update(values=stock_specific_values_OPTION)
+                watchlist_summary_report = self.Summarize_Cash_data(cash_file_path)
+
+
+                window_great['-Sector_Counter-'].update(values=watchlist_summary_report)
 
         window_great.close()
