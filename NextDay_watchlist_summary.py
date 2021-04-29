@@ -18,6 +18,12 @@ height_of_screen = coordinates[1]
 
 class class_Next_Day_watchlist_summary:
 
+    def Read_and_Summarise_watchlist(self,date_selected):
+        watchlist_data = pd.read_csv("Actual_result_daily.csv")
+        watchlist_data["Date_Selected"] = date_selected
+        return  watchlist_data.values.tolist()
+
+
     def get_Graph_resultant_array(stock, list_of_stocks_shortlisted):
         total_graphs = 3
         resultant = [False] * (len(list_of_stocks_shortlisted) * total_graphs)
@@ -36,7 +42,7 @@ class class_Next_Day_watchlist_summary:
 
         return resultant
 
-    def Summarize_Cash_data(self,Cash_file_path):
+    def Summarize_Cash_data(self,Cash_file_path,date_selected):
             nse = Nse()
             fig = go.Figure()
             Parent_dataFrame_To_Store_Each_Stock_DataFrame = []
@@ -52,9 +58,9 @@ class class_Next_Day_watchlist_summary:
             data.rename(columns={'SYMBOL': 'Date'}, inplace=True)
             data.rename(columns={' DATE1': 'Symbol'}, inplace=True)
             Shortlisted_DataFrame_With_Corresponding_Sectors = pd.merge(data, sector, on="Symbol")
-            temp_result = Shortlisted_DataFrame_With_Corresponding_Sectors[(Shortlisted_DataFrame_With_Corresponding_Sectors["Date"] == "2021-04-27") & (Shortlisted_DataFrame_With_Corresponding_Sectors["delivery_Factor"] > 100)]
+            temp_result = Shortlisted_DataFrame_With_Corresponding_Sectors[(Shortlisted_DataFrame_With_Corresponding_Sectors["Date"] == date_selected) & (Shortlisted_DataFrame_With_Corresponding_Sectors["delivery_Factor"] > 100)]
             temp_result = temp_result[["Date", "Symbol", "delivery_Factor", "Industry"]]
-            temp_resu = temp_result.groupby(['Industry', 'Symbol'])
+
 
 
 
@@ -177,24 +183,32 @@ class class_Next_Day_watchlist_summary:
     def GUI_formation(self):
         gui.theme('TealMono')
 
-        headings_Table = [ 'DATE','SECTOR_NAME', 'SYMBOL', 'COMPRESSION NUMBER','REPEAT DAYS']
-        raw_data = [[0, 0, 0, 0,0]]
+        headings_Table_Complete_watchlist = ['SECTOR_NAME','SYMBOL','ReturnToday','COMPRESSION NUMBER','REPEAT DAYS','Date']
+        raw_data_Complete_watchlist = [[0, 0, 0, 0,0,0]]
 
         headings_Sector_counter_Table = ['SECTOR_NAME','Counter']
         raw_data_Sector_counter = [[0, 0]]
 
         layout12 = [
-            [gui.Text("StockName : ", font=('MS Sans Serif', 7, 'bold'), text_color='red', background_color='white'),
+                        [
+                            gui.Text('Select Date', text_color="black", size=(20, 1), relief=gui.RELIEF_SUNKEN),
+                            gui.Input(key='-Date_Selected-'),
+                        ],
+                        [
+                            gui.CalendarButton('Pick the Date', target='-Date_Selected-',close_when_date_chosen=True)
+                        ],
 
-             gui.Button("GetSheet", font=('MS Sans Serif', 10, 'bold'), button_color=('red', 'white')),
-             ],
+                        [
+                            gui.Button("Get Summary Report", font=('MS Sans Serif', 10, 'bold'), button_color=('red', 'white')),
+                        ],
 
-            [gui.Table(values=raw_data,
-                       headings=headings_Table,
+            [gui.Table(values=raw_data_Complete_watchlist,
+                       headings=headings_Table_Complete_watchlist,
                        auto_size_columns=False,
                        justification='right',
-                       key='-TABLE_FO-',
-                       num_rows=max(len(raw_data), 20)),
+                       key='-WATCHLIST_SUMMARY-',
+                       alternating_row_color="yellow",
+                       num_rows=max(len(raw_data_Complete_watchlist), 40)),
 
              gui.Table(values=raw_data_Sector_counter,
                         headings=headings_Sector_counter_Table,
@@ -202,12 +216,7 @@ class class_Next_Day_watchlist_summary:
                         justification='right',
                         key='-Sector_Counter-',
                         alternating_row_color="brown",
-                        num_rows=max(len(raw_data),20)),
-
-
-
-
-
+                        num_rows=max(len(raw_data_Sector_counter),40)),
              ],
 
         ]
@@ -215,15 +224,24 @@ class class_Next_Day_watchlist_summary:
 
         while True:
             event, values = window_great.read()
-            print("event", event)
-            print("values", values)
+
             if (event == gui.WIN_CLOSED) or (event == "Exit"):
                 break
-            elif event=="GetSheet":
-
-                watchlist_summary_report = self.Summarize_Cash_data(cash_file_path)
 
 
-                window_great['-Sector_Counter-'].update(values=watchlist_summary_report)
+            elif event=="Get Summary Report":
+                if (str(values["-Date_Selected-"]) == ""):
+                   gui.popup_ok("Please Select The Date First", background_color="black",text_color="yellow")
+
+                else:
+                    full_format_date_selected = str(values["-Date_Selected-"])
+                    date_selected = (full_format_date_selected.split(" "))[0]
+
+
+                    watchlist_summary_report = self.Summarize_Cash_data(cash_file_path,date_selected)
+                    raw_data_Complete_watchlist = self.Read_and_Summarise_watchlist(date_selected)
+
+                    window_great['-WATCHLIST_SUMMARY-'].update(values=raw_data_Complete_watchlist)
+                    window_great['-Sector_Counter-'].update(values=watchlist_summary_report)
 
         window_great.close()
