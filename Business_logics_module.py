@@ -57,6 +57,18 @@ class Business_Logics:
             stock_list.sort()
         return stock_list
 
+    def Get_the_List_Of_cash_Stocks(self):
+        df_stock_list = pd.read_csv(Folder_Operation.cash_stock_list_path)
+        print(df_stock_list.columns)
+        df_stock_list = df_stock_list[(df_stock_list[' SERIES'] == ' EQ')]
+        total_list = list(df_stock_list['SYMBOL'])
+        stock_list = []
+        for i in total_list:
+            if i not in stock_list:
+                stock_list.append(i)
+            stock_list.sort()
+        return stock_list
+
     def Get_the_List_Of_MidCap_Stocks(self):
         df_stock_list = pd.read_csv(Folder_Operation.Nifty_400_stock_list_path)
 
@@ -472,7 +484,7 @@ class Business_Logics:
         Consolidated_cash__dataframe = pd.DataFrame(Consolidated_cash__dataframe)
         Consolidated_cash__dataframe.drop([' TURNOVER_LACS', ' AVG_PRICE'], axis=1, inplace=True)
         Consolidated_cash__dataframe = Consolidated_cash__dataframe[(Consolidated_cash__dataframe[' SERIES'] == " EQ")]
-        print(Consolidated_cash__dataframe.columns)
+
 
 
 
@@ -523,7 +535,7 @@ class Business_Logics:
              gui.DropDown(values=self.Get_the_List_Of_MidCap_Stocks(),auto_size_text=True,enable_events=True,size=(20,30),),
              gui.Button("Process Stocks Data", font=('MS Sans Serif', 10, 'bold'), button_color=('Blue', 'white'), ),
 
-             gui.ProgressBar(len(self.Get_the_List_Of_Stocks()), orientation='h', size=(20, 20), key='progbar'),
+             gui.ProgressBar(len(self.Get_the_List_Of_cash_Stocks()), orientation='h', size=(20, 20), key='progbar'),
 
 
              gui.Button("Watchlist Summary", font=('MS Sans Serif', 10, 'bold'), button_color=('white', 'blue')),
@@ -604,8 +616,7 @@ class Business_Logics:
                     stock_specific_values_FO = self.Process_Future_data_for_stock(values[0],Consolidated_future__dataframe,expiry_Date_For_Current_Month,expiry_Date_For_Previous_Month)
                     stock_specific_values_CASH = self.Process_Cash_data_for_stock(values[0],Consolidated_cash__dataframe)
                     stock_specific_values_OPTION = self.Process_Option_data_for_stock(values[0], FO_Files_list,expiry_Date_For_Current_Month)
-                    print(type(stock_specific_values_FO))
-                    print(stock_specific_values_FO)
+
 
                     window_Tabel_FO_Data['-TABLE_FO-'].update(values=stock_specific_values_FO)
                     window_Tabel_FO_Data['-TABLE_CASH-'].update(values=stock_specific_values_CASH)
@@ -639,14 +650,15 @@ class Business_Logics:
             if event_Tabel_FO_Data == "Process Stocks Data":
                 gui.popup_auto_close("Data Processing Starts . Please wait for the process to complete")
                 list_of_Stocks = self.Get_the_List_Of_Stocks()
+                list_of_cash_Stocks = self.Get_the_List_Of_cash_Stocks()
 
                 Cumlative_DataFrame = []
                 Cumlative_DataFrame_Cash = []
                 i = 0
-                for stock_name in list_of_Stocks[0:len(list_of_Stocks)]:
+                for stock_name in list_of_cash_Stocks[0:len(list_of_cash_Stocks)]:
                     i = i + 1
                     window_Tabel_FO_Data['progbar'].update_bar(i)
-                    stock_specific_values_FO = self.Process_Future_data_for_All_Stocks_And_Make_DataFrame(stock_name, FO_Files_list,expiry_Date_For_Current_Month)
+                    # stock_specific_values_FO = self.Process_Future_data_for_All_Stocks_And_Make_DataFrame(stock_name, FO_Files_list,expiry_Date_For_Current_Month)
                     stock_specific_values_CASH = self.Process_Cash_data_for_stock (stock_name,Consolidated_cash__dataframe)
                     # dataFrame_new = self.Convert_List_To_Dataframe(stock_specific_values_FO)
                     dataFrame_new_Cash = self.Convert_List_To_Dataframe_cash(stock_specific_values_CASH)
@@ -658,6 +670,9 @@ class Business_Logics:
                 # data_frames_of_all_Stocks_Post_Data_Processing.to_csv("Koko.csv")
 
                 data_frames_of_all_Stocks_Post_Data_cash_Processing = pd.concat(Cumlative_DataFrame_Cash)
+
+                data_frames_of_all_Stocks_Post_Data_cash_Processing = data_frames_of_all_Stocks_Post_Data_cash_Processing[["SYMBOL"," DATE1"," CLOSE_PRICE","HiLo_Percentage","delivery_Factor","vol_dis"]]
+
                 data_frames_of_all_Stocks_Post_Data_cash_Processing.to_csv("cash.csv")
 
 

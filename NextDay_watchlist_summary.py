@@ -58,6 +58,7 @@ class class_Next_Day_watchlist_summary:
             data.rename(columns={'SYMBOL': 'Date'}, inplace=True)
             data.rename(columns={' DATE1': 'Symbol'}, inplace=True)
             Shortlisted_DataFrame_With_Corresponding_Sectors = pd.merge(data, sector, on="Symbol")
+            print(Shortlisted_DataFrame_With_Corresponding_Sectors["Date"])
             temp_result = Shortlisted_DataFrame_With_Corresponding_Sectors[(Shortlisted_DataFrame_With_Corresponding_Sectors["Date"] == date_selected) & (Shortlisted_DataFrame_With_Corresponding_Sectors["delivery_Factor"] > 100)]
             temp_result = temp_result[["Date", "Symbol", "delivery_Factor", "Industry"]]
 
@@ -132,7 +133,7 @@ class class_Next_Day_watchlist_summary:
                 ])
 
             # send_email()
-            fig.show()
+            #fig.show()
             counter = 0
             NiftyChange_Percentage = (nse.get_index_quote("NIFTY 50")["pChange"])
             narrowRange_days = 0

@@ -5,6 +5,7 @@ class Folder_Operation():
     path = 'FObhavCopy_Data'
     LogPath = 'ApplicationLogs'
     stock_list_path = 'Stock_list//fo19MAR2021bhav.csv'
+    cash_stock_list_path = 'Stock_list//00_sec_bhavdata_full_03112020.csv'
     Nifty_400_stock_list_path = 'Stock_list//ind_nifty500list.csv'
     def Create_DownloadFolder_ifDoesnot_Exist(self):
 
