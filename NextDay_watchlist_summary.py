@@ -6,6 +6,7 @@ import pandas as pd
 
 cash_file_path = "cash.csv"
 sector_file = "Stock_list/ind_nifty500list.csv"
+#sector_file = "Stock_list/stock with sector name.csv"
 
 
 coordinates = pyautogui.size()
