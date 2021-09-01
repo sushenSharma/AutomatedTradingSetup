@@ -1,0 +1,36 @@
+version: v1.0
+name: Initial Pipeline
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Deploy
+    task:
+      jobs:
+        - name: Deploy to production
+          commands:
+            - echo "deploying using key $API_KEY"
+      env_vars:
+        - name: API_KEY
+          value: '123'
+  - name: 'Block #2'
+    task:
+      jobs:
+        - name: unit test
+          commands:
+            - echo 'running unit tests'
+  - name: 'Block #3'
+    task:
+      prologue:
+        commands:
+          - checkout
+      jobs:
+        - name: Integration Tests
+          commands:
+            - echo 'running integration tests'
+promotions:
+  - name: production deployment
+    pipeline_file: pipeline_2.yml
+    auto_promote:
+      when: branch = 'master' AND result = 'passed'
