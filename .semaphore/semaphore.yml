@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: Deploy to production
           commands:
-            - echo "deploying using key $API_KEY
+            - echo "deploying using key $API_KEY"
       env_vars:
         - name: API_KEY
           value: '123'
