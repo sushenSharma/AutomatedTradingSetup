@@ -160,11 +160,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.Experiment_2" />
       <item itemvalue="Python.Experiment_junkyard" />
       <item itemvalue="Python.GUI_Main" />
       <item itemvalue="Python.PromoterSetup" />
+      <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.swingtrading" />
     </list>
     <recent_temporary>
