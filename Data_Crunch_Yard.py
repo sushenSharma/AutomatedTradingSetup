@@ -68,4 +68,4 @@ print(Accuracy)
 #     elif ((recent_hilo > hilo_mean) and (recent_delivery_Factor > 300)):
 #         print(f"Recent_Hilo {stock}")
 print("anand git commit")
-
+print("new commit")
