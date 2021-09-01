@@ -5,6 +5,7 @@ cash_full_data = pd.read_csv("cash.csv")
 
 print(cash_full_data.columns)
 print("Just typing this string ,to make update to github")
+print("Typing this String again to generate second commit")
 stock_names = list(data["StockName"])
 
 cash_full_data = cash_full_data.groupby(" DATE1")
